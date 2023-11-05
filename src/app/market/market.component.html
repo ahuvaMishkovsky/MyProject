@@ -1,0 +1,19 @@
+<p id="title">
+    {{title}}
+  </p>
+  <table>
+    <tr>
+      <td>name</td>
+      <td>amount</td>
+      <td>price</td>
+      <td>in stock</td>
+    </tr>
+  <tr *ngFor="let item of arrProducts" >
+    <td>{{item.name}}</td>
+    <td>{{item.amount}}</td>
+    <td>{{item.price}}</td>
+    <td>{{this.backgroundColor=item.color}}</td>
+    <td><input type="checkbox" [checked]='item.amount>0' ></td>
+  </tr>
+   
+  </table>
